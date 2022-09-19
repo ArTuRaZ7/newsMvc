@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  {% for post in arr %}
+  <div class="posts">
+    <h1><a class="post-link" href="post/{{ loop.index0 }}">{{ post.title }}</a></h1>
+    <p>{{ post.content[0:300] }}</p>
+  </div>
+  {% endfor %}
+{% endblock %}
